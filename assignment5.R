@@ -1,16 +1,11 @@
-A <- matrix(1:100,  nrow = 10)
-B <- matrix(1:1000, nrow = 10)
+A <- matrix(c(2, 0, 1, 3), ncol = 3)
 
-dim(A)  # should be 10 × 10
-dim(B)  # 10 × 100 — not square
+B <- matrix(c(5, 2, 4, -1), ncol = 2)
 
-# For A
-invA <- solve(A)
-detA <- det(A)
+D <- diag(c(4, 1, 2, 3))
+D
 
-invA
-detA
-
-# For B, use tryCatch to capture errors
-invB <- tryCatch(solve(B), error = function(e) e)
-detB <- tryCatch(det(B),   error = function(e) e)
+E <- matrix(0, 5, 5) + diag(3, 5)
+E[1, 2:5] <- 1
+E[2:5, 1] <- 2
+E
