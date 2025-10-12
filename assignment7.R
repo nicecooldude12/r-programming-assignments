@@ -11,4 +11,5 @@ setClass("student_s4",
          slots = c(name = "character", age = "numeric", GPA = "numeric"))
 s4_obj <- new("student_s4", name = "Myself", age = 29, GPA = 3.5)
 
-print(s3_obj)
+
+summary(s3_obj)
