@@ -1,0 +1,38 @@
+---
+title: "My R Markdown Primer"
+author: "Killian Williams"
+date: "2025-11-12"
+output:
+  pdf_document: default
+  html_document: default
+---
+## Explantion
+
+R Markdown is like Python's Jupyter. Its great for exploratory Data Science/Analytics reports. The graphs and statistical computation needs an explanation as to how this can explain an observed pattern.
+
+
+$$
+\alpha^2 + \beta^2 = \gamma^2
+$$
+## Narrative
+
+Below is the setup and plotting of data in ggplot2. The plot clearly shows a Linear Negative Relationship between MPG and Weight. With this graph we can confidently assume that the more heavier a vehicle is the slower it will be. Further analysis is still needed to get a wider view of the mtcars dataset.
+
+
+```{r setup}
+install.packages("tinytex")
+library(ggplot2)
+car <- mtcars
+
+```
+
+
+
+```{r cars}
+ggplot(car, aes(x=wt, y=mpg, color=mpg)) + geom_point() + labs(x='Weight in Tons', y='Miles Per Hour', title='Linear Negative graph')
+```
+
+## Conclusion
+
+Using markdown is far more convenient compared to a simple report. Markdown has all of the features needed to create a coherent report. For example, a Cell (created by using ctrl+alt+i) can not only execute code but they can also individually run separately, can be changed in the setting features etc. I would always prefer this over any simple word document.
+
